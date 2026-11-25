@@ -1,0 +1,6 @@
+# Solo se versiona el proyecto: los datos (CSV) y el resto del material de la asignatura se quedan fuera.
+/*
+!/.gitignore
+!/README.md
+!/Social_Network_Ads_Regresion_Logistica.ipynb
+!/ParteLorenzo.ipynb

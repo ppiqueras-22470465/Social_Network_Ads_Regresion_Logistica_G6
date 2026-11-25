@@ -28,7 +28,7 @@ Sin nulos ni duplicados. Clases desbalanceadas: 64 % no compra y 36 % compra.
 3. **Partición**: codificación de `Gender` y división Train/Test 75/25 estratificada.
 4. **EDA sobre Train**: estadísticas descriptivas, histogramas, boxplots, matriz de correlación y pairplot.
 5. **Preparación y modelos**: estandarización dentro de un `Pipeline` (sin fuga de datos) y 10 regresiones logísticas candidatas.
-6. **Validación cruzada**: 5 particiones × 3 repeticiones, solo sobre Train, ajustando la regularización `C`.
+6. **Validación cruzada**: 5 particiones × 3 repeticiones, solo sobre Train.
 7. **Evaluación final**: matrices de confusión, Exactitud, Sensibilidad, Especificidad y Precisión en Train y Test, con la justificación de cada modelo según la teo
 ría.
 8. **Visualización**: probabilidades predichas en Train, fronteras de decisión y coeficientes.
@@ -51,11 +51,11 @@ Para marketing, perder un comprador (falso negativo) cuesta más que mostrar el 
 
 ## Resultados
 
-Modelo elegido: **M10 · edad y salario con términos cuadráticos, `class_weight='balanced'` y C = 10**.
+Modelo elegido: **M10 · edad y salario con términos cuadráticos, `class_weight='balanced'`**.
 
 | | Exactitud | Sensibilidad | Especificidad | Precisión |
 |---|---|---|---|---|
-| Validación cruzada | 90,44 % | 90,74 % | 90,33 % | 84,34 % |
+| Validación cruzada | 90,22 % | 90,43 % | 90,16 % | 84,04 % |
 | Test | 89,00 % | 86,11 % | 90,62 % | 83,78 % |
 
 En Test detecta **31 de los 36 compradores**, con 6 falsas alarmas. La diferencia entre Train y Test es pequeña, así que no hay indicios de overfitting fuerte.
